@@ -62,6 +62,10 @@ button {
     margin: 10px 0px 30px 0;
 }
 
+button:hover {
+    filter: brightness(1.1);
+}
+
 header .fa-solid,
 .fas {
     font-weight: 900;
@@ -150,6 +154,73 @@ ul {
     font-size: 1.1rem;
     font-weight: bold;
 }
+
+/* Animation d'apparition en douceur */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* On cache toutes les cartes au départ */
+.menu-card {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Décalage progressif entre chaque carte */
+.entrees .menu-card {
+    animation-delay: 0.2s;
+}
+
+.plats .menu-card {
+    animation-delay: 0.6s;
+}
+
+.desserts .menu-card {
+    animation-delay: 1s;
+}
+
+.menu-card {
+    position: relative;
+    padding-right: 30px; 
+  }
+  
+  .menu-card .checkmark {
+    position: absolute;
+    top: 50%;
+    right: -30px; 
+    transform: translateY(-50%);
+    opacity: 0; 
+    transition: right 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .menu-card:hover .checkmark {
+    right: 20px; 
+    opacity: 1;
+  }
+  
+  .menu-card-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%; 
+  }
+  
+  .checkmark:before {
+    content: '\f00c'; 
+    font-family: 'Font Awesome 5 Free'; 
+    font-weight: 900; 
+    font-size: 20px;
+    color: green;
+  }
+  
 
 .bouton {
     display: flex;
@@ -353,8 +424,8 @@ footer span {
     }
 
     h2 {
-        margin-left: 19%;
-        margin-bottom: 1%;
+        margin-left: 20%;
+        margin-bottom: 2%;
     }
 
     .pres {
