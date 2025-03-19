@@ -12,9 +12,15 @@
 
 header {
     display: flex;
-    justify-content: stretch;
     align-items: center;
+    justify-content: center;
+    position: relative;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+    position: absolute;
+    left: 0;
 }
 
 header i {
@@ -23,7 +29,7 @@ header i {
 
 header img {
     width: 50%;
-    margin: 25px 8% 15px 0px;
+    margin: 20px;
 }
 
 body {
@@ -42,8 +48,8 @@ h1 {
 h2 {
     font-weight: 300;
     font-size: 16px;
-    margin-left: 3%;
-    margin-bottom: 7%;
+    margin-left: 30px;
+    margin-bottom: 10px;
 }
 
 button {
@@ -122,13 +128,16 @@ ul {
 }
 
 .menu-card {
+    height: 80px;
+    overflow-x: hidden;
     display: flex;
-    flex-direction: column;
-    padding: 20px 10px;
+    padding-left: 10px;
     border-bottom: 1px solid #e0e0e0;
     margin: 0 5% 20px 5%;
     background-color: #FFF;
     border-radius: 20px;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
 }
 
 .menu-card-title {
@@ -138,9 +147,10 @@ ul {
 }
 
 .menu-card-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 20px 10px;
+    overflow: hidden;
+    height: 100%;
+    white-space: nowrap;
 }
 
 .menu-card-description {
@@ -148,14 +158,22 @@ ul {
     color: #000;
     font-weight: 300;
     margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .menu-card-prix {
+    padding-bottom: 10px;
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+    margin-left: auto;
     font-size: 1.1rem;
     font-weight: bold;
+    padding-right: 10px;
 }
 
-/* Animation d'apparition en douceur */
+/* Animation d'apparition */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -166,12 +184,6 @@ ul {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* On cache toutes les cartes au départ */
-.menu-card {
-    opacity: 0;
-    animation: fadeInUp 0.8s ease-out forwards;
 }
 
 /* Décalage progressif entre chaque carte */
@@ -187,40 +199,38 @@ ul {
     animation-delay: 1s;
 }
 
-.menu-card {
-    position: relative;
-    padding-right: 30px; 
-  }
-  
-  .menu-card .checkmark {
-    position: absolute;
-    top: 50%;
-    right: -30px; 
-    transform: translateY(-50%);
-    opacity: 0; 
-    transition: right 0.3s ease, opacity 0.3s ease;
-  }
-  
-  .menu-card:hover .checkmark {
-    right: 20px; 
+.menu-card .checkmark {
+    height: 100%;
+    width: 50px;
+    background-color: #99E2D0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-right: -50px;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.menu-card:hover .checkmark {
+    margin-right: 0;
     opacity: 1;
-  }
-  
-  .menu-card-title {
+}
+
+.menu-card-title {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 100%; 
-  }
-  
-  .checkmark:before {
-    content: '\f00c'; 
-    font-family: 'Font Awesome 5 Free'; 
-    font-weight: 900; 
+    max-width: 100%;
+}
+
+.checkmark:before {
+    content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
     font-size: 20px;
     color: green;
-  }
-  
+}
 
 .bouton {
     display: flex;
@@ -288,7 +298,7 @@ footer span {
     }
 
     header img {
-        width: 15%;
+        width: 20%;
         margin: 30px 0 30px 0;
     }
 
@@ -328,7 +338,7 @@ footer span {
     }
 
     h2 {
-        margin-left: 20%;
+        margin-left: 30px;
         margin-bottom: 1%;
     }
 
@@ -424,7 +434,7 @@ footer span {
     }
 
     h2 {
-        margin-left: 20%;
+        margin-left: 30px;
         margin-bottom: 2%;
     }
 

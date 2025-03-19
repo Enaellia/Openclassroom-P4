@@ -22,13 +22,11 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: #1a1a2e;
-    /* Couleur de fond */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
     animation: fadeOut 1s forwards 2.5s;
-    /* Disparition après 3s */
 }
 
 /* Animation de disparition */
@@ -45,7 +43,6 @@ body {
     height: 60px;
     border: 6px solid transparent;
     border-top: 6px solid #9356DC;
-    /* Couleur du spinner */
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
@@ -228,7 +225,7 @@ button {
 }
 
 button:hover {
-    filter: brightness(1.1);
+    filter: brightness(1.1);    
 }
 
 .bouton {
