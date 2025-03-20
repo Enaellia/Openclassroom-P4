@@ -13,6 +13,35 @@
 body {
     margin: 0;
     padding: 0;
+
+    h1 {
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+        font-family: 'Roboto';
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-family: 'roboto';
+        font-weight: 700;
+        font-size: 27px;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-family: 'roboto';
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 0;
+        margin-top: 11px;
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 18px;
+        text-align: center;
+    }
 }
 
 #loader {
@@ -76,83 +105,61 @@ header {
     justify-content: center;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    img {
+        width: 100%;
+        margin: 25px 0px 15px 0px;
+    }
 }
 
-header img {
-    width: 100%;
-    margin: 25px 0px 15px 0px;
-}
-
-h1 {
-    text-align: center;
-    font-weight: 700;
-    font-size: 24px;
-    font-family: 'Roboto';
-    margin-bottom: 0;
-}
-
-h2 {
-    font-family: 'roboto';
-    font-weight: 700;
-    font-size: 27px;
-}
-
-h3 {
-    font-size: 18px;
-    font-family: 'roboto';
-    font-weight: 700;
-    color: #000;
-    margin-bottom: 0;
-    margin-top: 11px;
-}
-
-p {
-    font-weight: 300;
-    font-size: 18px;
-    text-align: center;
-}
-
-.fonctionnement ul {
-    list-style: none;
-    flex-wrap: nowrap;
-    padding: 0;
-    margin-left: 10px;
-}
-
-.fonctionnement li {
+.fonctionnement {
+    background-color: #fff;
     display: flex;
-    width: 100%;
-    height: 70px;
-    font-size: 17px;
-    align-items: center;
-    padding: 10px 20px;
-    margin: 10px 0 20px 0;
-    background-color: #f2f2f2;
-    border-radius: 20px;
-    position: relative;
-    align-self: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+    flex-direction: column;
+    padding: 20px;
 
-.fonctionnement li span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 25px;
-    height: 25px;
-    background-color: #9356dc;
-    color: white;
-    border-radius: 50%;
-    position: absolute;
-    left: -12px;
-}
+    ul {
+        list-style: none;
+        flex-wrap: nowrap;
+        padding: 0;
+        margin-left: 10px;
 
-.fonctionnement li a {
-    text-decoration: none;
-    color: black;
-    padding-left: 10px;
-    font-weight: 500;
-    font-family: 'Roboto';
+        li {
+            display: flex;
+            width: 100%;
+            height: 70px;
+            font-size: 17px;
+            align-items: center;
+            padding: 10px 20px;
+            margin: 10px 0 20px 0;
+            background-color: #f2f2f2;
+            border-radius: 20px;
+            position: relative;
+            align-self: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        li span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 25px;
+            height: 25px;
+            background-color: #9356dc;
+            color: white;
+            border-radius: 50%;
+            position: absolute;
+            left: -12px;
+        }
+
+        li a {
+            text-decoration: none;
+            color: black;
+            padding-left: 10px;
+            font-weight: 500;
+            font-family: 'Roboto';
+        }
+    }
 }
 
 #fonctionnement {
@@ -163,21 +170,12 @@ p {
         color: #716b6b;
         font-size: 22px;
     }
-}
 
-#fonctionnement {
     .fa-store {
         margin-right: 16px;
         color: #9356DC;
         font-size: 22px;
     }
-}
-
-.fonctionnement {
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
 }
 
 .location-container {
@@ -222,10 +220,10 @@ button {
     font-weight: 500;
     font-family: 'roboto';
     margin: 10px 0px 30px 0;
-}
 
-button:hover {
-    filter: brightness(1.1);    
+    &:hover {
+        filter: brightness(1.1);
+    }
 }
 
 .bouton {
@@ -244,22 +242,23 @@ button:hover {
 .restaurants {
     background-color: #f6f6f6;
     padding: 0 0 0 15px;
-}
 
-.restaurants a {
-    text-decoration: none;
-    width: 100%;
-}
+    a {
+        text-decoration: none;
+        width: 100%;
+    }
 
-.restaurants h2 {
-    padding: 40px 20px 0 10px;
-}
+    h2 {
+        padding: 40px 20px 0 10px;
+    }
 
-.restaurants p {
-    font-size: 17px;
-    margin-top: 3px;
-    text-align: left;
-    color: #000;
+    p {
+        font-size: 17px;
+        margin-top: 3px;
+        text-align: left;
+        color: #000;
+    }
+
 }
 
 .restaurants {
@@ -374,112 +373,29 @@ footer {
     background-color: #353535;
     color: #fff;
     flex-direction: column;
-}
 
-footer a {
-    color: #fff;
-    text-decoration: none;
-}
-
-footer ul {
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-}
-
-footer ul li {
-    display: grid;
-}
-
-footer ul li i {
-    justify-self: start;
-    margin-right: 8px;
-}
-
-footer span {
-    margin-left: 8px;
-}
-
-/* Styles pour écrans plus grands (desktop) */
-@media all and (min-width: 1024px) {
-    .container {
-        max-width: 960px;
+    a {
+        color: #fff;
+        text-decoration: none;
     }
 
-
-    h1 {
-        font-size: 40px;
-    }
-
-    h2 {
-        width: 100%;
-        padding: 0;
-    }
-
-    button {
-        width: auto;
-        padding: 20px 20px 40px 20px;
-        margin: 10px 0px 10px 0;
-    }
-
-    .card {
-        width: 100%;
-    }
-
-    .fonctionnement {
-        padding: 0 10%;
-    }
-
-    .fonctionnement ul {
+    ul {
         display: flex;
-        align-self: center;
-        gap: 30px;
-        padding: 0;
-        font-size: 10px;
-        width: 100%;
+        gap: 10px;
+        flex-direction: column;
     }
 
-    .restaurants h2 {
-        padding: 0;
+    ul li {
+        display: grid;
     }
 
-    .restaurants {
-        background-color: #f6f6f6;
-        padding: 0 10%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+    ul li i {
+        justify-self: start;
+        margin-right: 8px;
     }
 
-    .restaurant-cards {
-        width: 47%;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    footer {
-        padding: 0 1%;
-        flex-direction: row-reverse;
-    }
-
-    footer ul {
-        flex-direction: row;
-        margin: 0;
-        padding: 0;
-        margin: 56px 48px 0 0;
-    }
-
-    .ohmy {
-        padding: 10px 0;
-        margin: 40px 0 13px 0;
-    }
-
-    footer ul li {
-        margin-right: 15px;
+    span {
+        margin-left: 8px;
     }
 }
 
@@ -510,19 +426,15 @@ footer span {
 
     .fonctionnement {
         padding: 0 10%;
-    }
 
-    .fonctionnement ul {
-        display: flex;
-        align-self: center;
-        gap: 30px;
-        padding: 0;
-        font-size: 10px;
-        width: 100%;
-    }
-
-    .restaurants h2 {
-        padding: 0;
+        ul {
+            display: flex;
+            align-self: center;
+            gap: 30px;
+            padding: 0;
+            font-size: 10px;
+            width: 100%;
+        }
     }
 
     .restaurants {
@@ -531,6 +443,10 @@ footer span {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        h2 {
+            padding: 0;
+        }
     }
 
     .restaurant-cards {
@@ -546,23 +462,38 @@ footer span {
     footer {
         padding: 0 1%;
         flex-direction: row-reverse;
-    }
 
-    footer ul {
-        flex-direction: row;
-        margin: 0;
-        padding: 0;
-        margin: 56px 5% 0 0;
-        gap: 0;
+        ul {
+            flex-direction: row;
+            margin: 0;
+            padding: 0;
+            margin: 56px 5% 0 0;
+            gap: 0;
+        }
+
+        ul li {
+            margin-right: 15px;
+        }
     }
 
     .ohmy {
         padding: 10px 0;
         margin: 40px 1% 13px 0;
     }
+}
 
-    footer ul li {
-        margin-right: 15px;
+/* Styles pour écrans plus grands (desktop) */
+@media all and (min-width: 1024px) {
+    .container {
+        max-width: 960px;
+    }
+
+    footer ul {
+        margin: 56px 48px 0 0;
+    }
+
+    .ohmy {
+        margin: 40px 5px 13px 0;
     }
 }
 

@@ -16,40 +16,55 @@ header {
     justify-content: center;
     position: relative;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
 
-header a {
-    position: absolute;
-    left: 0;
-}
+    a {
+        position: absolute;
+        left: 0;
+    }
 
-header i {
-    align-items: flex-start;
-}
+    i {
+        align-items: flex-start;
+    }
 
-header img {
-    width: 50%;
-    margin: 20px;
+    img {
+        width: 50%;
+        margin: 20px;
+    }
+
+    .fa-solid,
+    .fas {
+        font-weight: 900;
+        font-size: x-large;
+        margin: 0 0 0 68%;
+        color: black
+    }
+
 }
 
 body {
     margin: 0;
     padding: 0;
+
+    h1 {
+        margin: 0 0 0 4%;
+        font-family: "shrikhand";
+        font-weight: 400;
+        font-style: italic;
+        font-size: 28px;
+    }
+
+    h2 {
+        font-weight: 300;
+        font-size: 16px;
+        margin-left: 30px;
+        margin-bottom: 10px;
+    }
 }
 
-h1 {
-    margin: 0 0 0 4%;
-    font-family: "shrikhand";
-    font-weight: 400;
-    font-style: italic;
-    font-size: 28px;
-}
-
-h2 {
-    font-weight: 300;
-    font-size: 16px;
-    margin-left: 30px;
-    margin-bottom: 10px;
+.pres {
+    width: 100%;
+    object-fit: cover;
+    max-height: 250px;
 }
 
 button {
@@ -64,26 +79,12 @@ button {
     border: none;
     font-size: 16px;
     font-weight: 500;
-    font-family: "roboto";
-    margin: 10px 0px 30px 0;
-}
+    font-family: "Roboto", sans-serif;
+    margin: 10px 0 30px 0;
 
-button:hover {
-    filter: brightness(1.1);
-}
-
-header .fa-solid,
-.fas {
-    font-weight: 900;
-    font-size: x-large;
-    margin: 0 0 0 68%;
-    color: black
-}
-
-.pres {
-    width: 100%;
-    object-fit: cover;
-    max-height: 250px;
+    &:hover {
+        filter: brightness(1.1);
+    }
 }
 
 .menu {
@@ -100,31 +101,31 @@ header .fa-solid,
     justify-content: space-between;
     align-items: center;
     margin-right: 5%;
-}
 
-.titre i {
-    font-size: x-large;
-}
-
-.under {
-    position: relative;
-    display: inline-block;
-}
-
-.under::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 50%;
-    height: 2px;
-    background-color: #99E2D0;
+    i {
+        font-size: x-large;
+    }
 }
 
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+.under {
+    position: relative;
+    display: inline-block;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 50%;
+        height: 2px;
+        background-color: #99E2D0;
+    }
 }
 
 .menu-card {
@@ -138,39 +139,39 @@ ul {
     border-radius: 20px;
     opacity: 0;
     animation: fadeInUp 0.8s ease-out forwards;
-}
 
-.menu-card-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 0 0 5px;
-}
+    .menu-card-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 0 0 5px;
+    }
 
-.menu-card-details {
-    padding: 20px 10px;
-    overflow: hidden;
-    height: 100%;
-    white-space: nowrap;
-}
+    .menu-card-details {
+        padding: 20px 10px;
+        overflow: hidden;
+        height: 100%;
+        white-space: nowrap;
+    }
 
-.menu-card-description {
-    font-size: 1rem;
-    color: #000;
-    font-weight: 300;
-    margin: 0;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
+    .menu-card-description {
+        font-size: 1rem;
+        color: #000;
+        font-weight: 300;
+        margin: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
 
-.menu-card-prix {
-    padding-bottom: 10px;
-    display: flex;
-    height: 100%;
-    align-items: flex-end;
-    margin-left: auto;
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding-right: 10px;
+    .menu-card-prix {
+        padding-bottom: 10px;
+        display: flex;
+        height: 100%;
+        align-items: flex-end;
+        margin-left: auto;
+        font-size: 1.1rem;
+        font-weight: bold;
+        padding-right: 10px;
+    }
 }
 
 /* Animation d'apparition */
@@ -187,49 +188,62 @@ ul {
 }
 
 /* Décalage progressif entre chaque carte */
-.entrees .menu-card {
-    animation-delay: 0.2s;
+.entrees {
+    .menu-card {
+        animation-delay: 0.2s;
+    }
 }
 
-.plats .menu-card {
-    animation-delay: 0.6s;
+.plats {
+    .menu-card {
+        animation-delay: 0.6s;
+    }
 }
 
-.desserts .menu-card {
-    animation-delay: 1s;
+.desserts {
+    .menu-card {
+        animation-delay: 1s;
+    }
 }
 
-.menu-card .checkmark {
-    height: 100%;
-    width: 50px;
-    background-color: #99E2D0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    margin-right: -50px;
-    opacity: 0;
-    transition: all 1s ease;
-}
+.menu-card {
+    .checkmark {
+        height: 100%;
+        width: 70px;
+        background-color: #99E2D0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin-right: -50px;
+        opacity: 0;
+        transition: all 1s ease;
+    }
 
-.menu-card:hover .checkmark {
-    margin-right: 0;
-    opacity: 1;
-}
+    &:hover {
+        .checkmark {
+            margin-right: 0;
+            opacity: 1;
+        }
+    }
 
-.menu-card-title {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
+    .menu-card-title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    }
 }
 
 .checkmark:before {
-    content: '\f00c';
-    font-family: 'Font Awesome 5 Free';
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 20px;
-    color: green;
+    color: #99E2D0;
+    background-color: white;
+    border-radius: 100%;
+    padding: 5px;
 }
 
 .bouton {
@@ -237,50 +251,49 @@ ul {
     justify-content: center;
 }
 
-.ohmy {
-    font-family: Shrikhand, cursive;
-    padding: 20px 0 0 20px;
-    font-size: 20px;
-    margin-bottom: 5%;
-}
-
-footer .fa-solid,
-.fas {
-    margin: 0 2% 0 0;
-}
-
 footer {
     display: flex;
     background-color: #353535;
     color: #fff;
     flex-direction: column;
+
+    .fa-solid,
+    .fas {
+        margin: 0 2% 0 0;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    ul {
+        display: flex;
+        gap: 7px;
+        flex-direction: column;
+        padding: 7px 10px 5px 40px;
+
+        li {
+            display: grid;
+
+            i {
+                justify-self: start;
+                margin-right: 8px;
+            }
+        }
+    }
+
+    span {
+        margin-left: 8px;
+    }
+
+    .ohmy {
+        font-family: Shrikhand, cursive;
+        padding: 20px 0 0 40px;
+        font-size: 20px;
+    }
 }
 
-footer a {
-    color: #fff;
-    text-decoration: none;
-}
-
-footer ul {
-    display: flex;
-    flex-direction: column;
-    margin: 0 0 0 20px;
-}
-
-footer ul li {
-    margin: 3px;
-}
-
-footer ul li i {
-    justify-self: start;
-    margin-right: 8px;
-}
-
-footer span {
-    margin-left: 8px;
-}
-
-/* Styles pour écrans plus grands (desktop) */
 @media all and (min-width: 768px) {
     .container {
         max-width: 750px;
@@ -291,23 +304,30 @@ footer span {
         display: flex;
         padding: 0;
         flex-direction: column;
+
+        h1 {
+            margin: 0 2% 0 4%;
+        }
+
+        h2 {
+            margin-left: 130px;
+            margin-bottom: 20px;
+        }
     }
 
-    h1 {
-        margin: 0 2% 0 4%;
-    }
+    header {
+        img {
+            width: 20%;
+            margin: 30px 0 30px 0;
+        }
 
-    header img {
-        width: 20%;
-        margin: 30px 0 30px 0;
-    }
-
-    header .fa-solid,
-    .fas {
-        font-weight: 900;
-        font-size: x-large;
-        margin: 0 0 0 68%;
-        color: black;
+        .fa-solid,
+        .fas {
+            font-weight: 900;
+            font-size: x-large;
+            margin: 0 0 0 68%;
+            color: black;
+        }
     }
 
     .cards {
@@ -326,10 +346,10 @@ footer span {
         align-self: center;
         margin-top: -30px;
         background-color: #f6f6f6;
-    }
 
-    .menu-card {
-        width: 60%;
+        .menu-card {
+            width: 60%;
+        }
     }
 
     li {
@@ -337,42 +357,36 @@ footer span {
         justify-content: center;
     }
 
-    h2 {
-        margin-left: 30px;
-        margin-bottom: 1%;
-    }
-
     .pres {
         max-height: 380px;
     }
 
     button {
-        width: 20%;
+        width: 30%;
     }
 
     footer {
         padding: 0 1%;
         flex-direction: row-reverse;
-    }
 
-    footer ul {
-        flex-direction: row;
-        margin: 0;
-        padding: 0;
-        margin: 7% 2% 0 0;
-    }
+        .ohmy {
+            padding: 10px 0 0 20px;
+            margin: 40px 10px 13px 0;
+        }
 
-    .ohmy {
-        padding: 10px 0;
-        margin: 40px 5% 13px 0;
-    }
+        ul {
+            flex-direction: row;
+            margin: 7% 2% 0 5%;
+            padding: 0;
 
-    footer ul li {
-        margin-right: 15px;
-    }
+            li {
+                margin-right: 15px;
+            }
+        }
 
-    footer a {
-        white-space: nowrap;
+        a {
+            white-space: nowrap;
+        }
     }
 }
 
@@ -383,93 +397,16 @@ footer span {
     }
 
     body {
-        margin: 0;
-        display: flex;
-        padding: 0;
-        flex-direction: column;
-    }
-
-    h1 {
-        margin: 0 2% 0 4%;
-    }
-
-    header img {
-        width: 15%;
-        margin: 30px 0 30px 0;
-    }
-
-    header .fa-solid,
-    .fas {
-        font-weight: 900;
-        font-size: x-large;
-        margin: 0 0 0 68%;
-        color: black
-    }
-
-    .cards {
-        display: flex;
-    }
-
-    .titre {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 2%;
-    }
-
-    .menu {
-        width: 80%;
-        align-self: center;
-        margin-top: -30px;
-        background-color: #f6f6f6;
-    }
-
-    .menu-card {
-        width: 60%;
-    }
-
-    li {
-        display: flex;
-        justify-content: center;
-    }
-
-    h2 {
-        margin-left: 30px;
-        margin-bottom: 2%;
-    }
-
-    .pres {
-        max-height: 380px;
-    }
-
-    button {
-        width: 20%;
+        h2 {
+            margin-left: 230px;
+            margin-bottom: 2%;
+        }
     }
 
     footer {
-        padding: 0 1%;
-        flex-direction: row-reverse;
-    }
-
-    footer ul {
-        flex-direction: row;
-        margin: 0;
-        padding: 0;
-        margin: 3% 5% 0 0;
-        gap: 0;
-    }
-
-    .ohmy {
-        padding: 10px 0;
-        margin: 30px 4% 13px 0;
-    }
-
-    footer ul li {
-        margin-right: 15px;
-    }
-
-    footer a {
-        white-space: nowrap;
+        ul {
+            margin: 55px 4% 14px 0;
+        }
     }
 }
 

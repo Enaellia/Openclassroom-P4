@@ -16,39 +16,48 @@ header {
   position: relative;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 header a {
   position: absolute;
   left: 0;
 }
-
 header i {
   align-items: flex-start;
 }
-
 header img {
   width: 50%;
   margin: 20px;
+}
+header .fa-solid,
+header .fas {
+  font-weight: 900;
+  font-size: x-large;
+  margin: 0 0 0 68%;
+  color: black;
 }
 
 body {
   margin: 0;
   padding: 0;
 }
-
-h1 {
+body h1 {
   margin: 0 0 0 4%;
   font-family: "shrikhand";
   font-weight: 400;
   font-style: italic;
   font-size: 28px;
 }
-
-h2 {
+body h2 {
   font-weight: 300;
   font-size: 16px;
   margin-left: 30px;
   margin-bottom: 10px;
+}
+
+.pres {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 250px;
 }
 
 button {
@@ -63,27 +72,11 @@ button {
   border: none;
   font-size: 16px;
   font-weight: 500;
-  font-family: "roboto";
-  margin: 10px 0px 30px 0;
+  font-family: "Roboto", sans-serif;
+  margin: 10px 0 30px 0;
 }
-
 button:hover {
   filter: brightness(1.1);
-}
-
-header .fa-solid,
-.fas {
-  font-weight: 900;
-  font-size: x-large;
-  margin: 0 0 0 68%;
-  color: black;
-}
-
-.pres {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  max-height: 250px;
 }
 
 .menu {
@@ -101,16 +94,20 @@ header .fa-solid,
   align-items: center;
   margin-right: 5%;
 }
-
 .titre i {
   font-size: x-large;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .under {
   position: relative;
   display: inline-block;
 }
-
 .under::after {
   content: "";
   position: absolute;
@@ -119,12 +116,6 @@ header .fa-solid,
   width: 50%;
   height: 2px;
   background-color: #99E2D0;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .menu-card {
@@ -139,21 +130,18 @@ ul {
   opacity: 0;
   animation: fadeInUp 0.8s ease-out forwards;
 }
-
-.menu-card-title {
+.menu-card .menu-card-title {
   font-size: 1.2rem;
   font-weight: bold;
   margin: 0 0 5px;
 }
-
-.menu-card-details {
+.menu-card .menu-card-details {
   padding: 20px 10px;
   overflow: hidden;
   height: 100%;
   white-space: nowrap;
 }
-
-.menu-card-description {
+.menu-card .menu-card-description {
   font-size: 1rem;
   color: #000;
   font-weight: 300;
@@ -161,8 +149,7 @@ ul {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-
-.menu-card-prix {
+.menu-card .menu-card-prix {
   padding-bottom: 10px;
   display: flex;
   height: 100%;
@@ -199,7 +186,7 @@ ul {
 
 .menu-card .checkmark {
   height: 100%;
-  width: 50px;
+  width: 70px;
   background-color: #99E2D0;
   display: flex;
   justify-content: center;
@@ -209,13 +196,11 @@ ul {
   opacity: 0;
   transition: all 1s ease;
 }
-
 .menu-card:hover .checkmark {
   margin-right: 0;
   opacity: 1;
 }
-
-.menu-card-title {
+.menu-card .menu-card-title {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -227,24 +212,15 @@ ul {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 20px;
-  color: green;
+  color: #99E2D0;
+  background-color: white;
+  border-radius: 100%;
+  padding: 5px;
 }
 
 .bouton {
   display: flex;
   justify-content: center;
-}
-
-.ohmy {
-  font-family: Shrikhand, cursive;
-  padding: 20px 0 0 20px;
-  font-size: 20px;
-  margin-bottom: 5%;
-}
-
-footer .fa-solid,
-.fas {
-  margin: 0 2% 0 0;
 }
 
 footer {
@@ -253,32 +229,36 @@ footer {
   color: #fff;
   flex-direction: column;
 }
-
+footer .fa-solid,
+footer .fas {
+  margin: 0 2% 0 0;
+}
 footer a {
   color: #fff;
   text-decoration: none;
 }
-
 footer ul {
   display: flex;
+  gap: 7px;
   flex-direction: column;
-  margin: 0 0 0 20px;
+  padding: 7px 10px 5px 40px;
 }
-
 footer ul li {
-  margin: 3px;
+  display: grid;
 }
-
 footer ul li i {
   justify-self: start;
   margin-right: 8px;
 }
-
 footer span {
   margin-left: 8px;
 }
+footer .ohmy {
+  font-family: Shrikhand, cursive;
+  padding: 20px 0 0 40px;
+  font-size: 20px;
+}
 
-/* Styles pour écrans plus grands (desktop) */
 @media all and (min-width: 768px) {
   .container {
     max-width: 750px;
@@ -289,15 +269,19 @@ footer span {
     padding: 0;
     flex-direction: column;
   }
-  h1 {
+  body h1 {
     margin: 0 2% 0 4%;
+  }
+  body h2 {
+    margin-left: 130px;
+    margin-bottom: 20px;
   }
   header img {
     width: 20%;
     margin: 30px 0 30px 0;
   }
   header .fa-solid,
-  .fas {
+  header .fas {
     font-weight: 900;
     font-size: x-large;
     margin: 0 0 0 68%;
@@ -318,36 +302,31 @@ footer span {
     margin-top: -30px;
     background-color: #f6f6f6;
   }
-  .menu-card {
+  .menu .menu-card {
     width: 60%;
   }
   li {
     display: flex;
     justify-content: center;
   }
-  h2 {
-    margin-left: 30px;
-    margin-bottom: 1%;
-  }
   .pres {
     max-height: 380px;
   }
   button {
-    width: 20%;
+    width: 30%;
   }
   footer {
     padding: 0 1%;
     flex-direction: row-reverse;
   }
+  footer .ohmy {
+    padding: 10px 0 0 20px;
+    margin: 40px 10px 13px 0;
+  }
   footer ul {
     flex-direction: row;
-    margin: 0;
+    margin: 7% 2% 0 5%;
     padding: 0;
-    margin: 7% 2% 0 0;
-  }
-  .ohmy {
-    padding: 10px 0;
-    margin: 40px 5% 13px 0;
   }
   footer ul li {
     margin-right: 15px;
@@ -361,78 +340,12 @@ footer span {
   .container {
     max-width: 960px;
   }
-  body {
-    margin: 0;
-    display: flex;
-    padding: 0;
-    flex-direction: column;
-  }
-  h1 {
-    margin: 0 2% 0 4%;
-  }
-  header img {
-    width: 15%;
-    margin: 30px 0 30px 0;
-  }
-  header .fa-solid,
-  .fas {
-    font-weight: 900;
-    font-size: x-large;
-    margin: 0 0 0 68%;
-    color: black;
-  }
-  .cards {
-    display: flex;
-  }
-  .titre {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  body h2 {
+    margin-left: 230px;
     margin-bottom: 2%;
-  }
-  .menu {
-    width: 80%;
-    align-self: center;
-    margin-top: -30px;
-    background-color: #f6f6f6;
-  }
-  .menu-card {
-    width: 60%;
-  }
-  li {
-    display: flex;
-    justify-content: center;
-  }
-  h2 {
-    margin-left: 30px;
-    margin-bottom: 2%;
-  }
-  .pres {
-    max-height: 380px;
-  }
-  button {
-    width: 20%;
-  }
-  footer {
-    padding: 0 1%;
-    flex-direction: row-reverse;
   }
   footer ul {
-    flex-direction: row;
-    margin: 0;
-    padding: 0;
-    margin: 3% 5% 0 0;
-    gap: 0;
-  }
-  .ohmy {
-    padding: 10px 0;
-    margin: 30px 4% 13px 0;
-  }
-  footer ul li {
-    margin-right: 15px;
-  }
-  footer a {
-    white-space: nowrap;
+    margin: 55px 4% 14px 0;
   }
 }
 /*# sourceMappingURL=restaurants.css.map */

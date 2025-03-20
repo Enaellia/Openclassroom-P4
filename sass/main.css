@@ -13,6 +13,31 @@ body {
   margin: 0;
   padding: 0;
 }
+body h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  font-family: "Roboto";
+  margin-bottom: 0;
+}
+body h2 {
+  font-family: "roboto";
+  font-weight: 700;
+  font-size: 27px;
+}
+body h3 {
+  font-size: 18px;
+  font-family: "roboto";
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0;
+  margin-top: 11px;
+}
+body p {
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+}
 
 #loader {
   position: fixed;
@@ -73,49 +98,24 @@ header {
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 header img {
   width: 100%;
   margin: 25px 0px 15px 0px;
 }
 
-h1 {
-  text-align: center;
-  font-weight: 700;
-  font-size: 24px;
-  font-family: "Roboto";
-  margin-bottom: 0;
+.fonctionnement {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
-
-h2 {
-  font-family: "roboto";
-  font-weight: 700;
-  font-size: 27px;
-}
-
-h3 {
-  font-size: 18px;
-  font-family: "roboto";
-  font-weight: 700;
-  color: #000;
-  margin-bottom: 0;
-  margin-top: 11px;
-}
-
-p {
-  font-weight: 300;
-  font-size: 18px;
-  text-align: center;
-}
-
 .fonctionnement ul {
   list-style: none;
   flex-wrap: nowrap;
   padding: 0;
   margin-left: 10px;
 }
-
-.fonctionnement li {
+.fonctionnement ul li {
   display: flex;
   width: 100%;
   height: 70px;
@@ -129,8 +129,7 @@ p {
   align-self: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-.fonctionnement li span {
+.fonctionnement ul li span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -142,8 +141,7 @@ p {
   position: absolute;
   left: -12px;
 }
-
-.fonctionnement li a {
+.fonctionnement ul li a {
   text-decoration: none;
   color: black;
   padding-left: 10px;
@@ -157,18 +155,10 @@ p {
   color: #716b6b;
   font-size: 22px;
 }
-
 #fonctionnement .fa-store {
   margin-right: 16px;
   color: #9356DC;
   font-size: 22px;
-}
-
-.fonctionnement {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
 }
 
 .location-container {
@@ -214,7 +204,6 @@ button {
   font-family: "roboto";
   margin: 10px 0px 30px 0;
 }
-
 button:hover {
   filter: brightness(1.1);
 }
@@ -236,16 +225,13 @@ button:hover {
   background-color: #f6f6f6;
   padding: 0 0 0 15px;
 }
-
 .restaurants a {
   text-decoration: none;
   width: 100%;
 }
-
 .restaurants h2 {
   padding: 40px 20px 0 10px;
 }
-
 .restaurants p {
   font-size: 17px;
   margin-top: 3px;
@@ -364,99 +350,26 @@ footer {
   color: #fff;
   flex-direction: column;
 }
-
 footer a {
   color: #fff;
   text-decoration: none;
 }
-
 footer ul {
   display: flex;
   gap: 10px;
   flex-direction: column;
 }
-
 footer ul li {
   display: grid;
 }
-
 footer ul li i {
   justify-self: start;
   margin-right: 8px;
 }
-
 footer span {
   margin-left: 8px;
 }
 
-/* Styles pour écrans plus grands (desktop) */
-@media all and (min-width: 1024px) {
-  .container {
-    max-width: 960px;
-  }
-  h1 {
-    font-size: 40px;
-  }
-  h2 {
-    width: 100%;
-    padding: 0;
-  }
-  button {
-    width: auto;
-    padding: 20px 20px 40px 20px;
-    margin: 10px 0px 10px 0;
-  }
-  .card {
-    width: 100%;
-  }
-  .fonctionnement {
-    padding: 0 10%;
-  }
-  .fonctionnement ul {
-    display: flex;
-    align-self: center;
-    gap: 30px;
-    padding: 0;
-    font-size: 10px;
-    width: 100%;
-  }
-  .restaurants h2 {
-    padding: 0;
-  }
-  .restaurants {
-    background-color: #f6f6f6;
-    padding: 0 10%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .restaurant-cards {
-    width: 47%;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  footer {
-    padding: 0 1%;
-    flex-direction: row-reverse;
-  }
-  footer ul {
-    flex-direction: row;
-    margin: 0;
-    padding: 0;
-    margin: 56px 48px 0 0;
-  }
-  .ohmy {
-    padding: 10px 0;
-    margin: 40px 0 13px 0;
-  }
-  footer ul li {
-    margin-right: 15px;
-  }
-}
 /* Styles pour écrans plus grands (tablette) */
 @media (min-width: 768px) {
   .container {
@@ -488,15 +401,15 @@ footer span {
     font-size: 10px;
     width: 100%;
   }
-  .restaurants h2 {
-    padding: 0;
-  }
   .restaurants {
     background-color: #f6f6f6;
     padding: 0 10%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+  .restaurants h2 {
+    padding: 0;
   }
   .restaurant-cards {
     width: 47%;
@@ -518,12 +431,24 @@ footer span {
     margin: 56px 5% 0 0;
     gap: 0;
   }
+  footer ul li {
+    margin-right: 15px;
+  }
   .ohmy {
     padding: 10px 0;
     margin: 40px 1% 13px 0;
   }
-  footer ul li {
-    margin-right: 15px;
+}
+/* Styles pour écrans plus grands (desktop) */
+@media all and (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+  footer ul {
+    margin: 56px 48px 0 0;
+  }
+  .ohmy {
+    margin: 40px 5px 13px 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
