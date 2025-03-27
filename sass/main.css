@@ -180,7 +180,7 @@ header img {
 }
 
 .logo {
-  width: 200px;
+  width: 150px;
 }
 
 .promesse {
@@ -297,14 +297,6 @@ button:hover {
   margin-bottom: 20px;
   padding: 0;
 }
-
-.restaurants .card-content {
-  padding-left: 15px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
 .card img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -312,6 +304,13 @@ button:hover {
   height: 70%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+}
+
+.restaurants .card-content {
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .nouveau-label {

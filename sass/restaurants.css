@@ -24,8 +24,8 @@ header i {
   align-items: flex-start;
 }
 header img {
-  width: 50%;
-  margin: 20px;
+  width: 150px;
+  margin: 15px;
 }
 header .fa-solid,
 header .fas {
@@ -278,7 +278,7 @@ footer .ohmy {
   }
   header img {
     width: 20%;
-    margin: 30px 0 30px 0;
+    margin: 20px 0 20px 0;
   }
   header .fa-solid,
   header .fas {
@@ -343,6 +343,10 @@ footer .ohmy {
   body h2 {
     margin-left: 230px;
     margin-bottom: 2%;
+  }
+  header img {
+    width: 15%;
+    margin: 20px 0 20px 0;
   }
   footer ul {
     margin: 55px 4% 14px 0;

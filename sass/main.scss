@@ -197,7 +197,7 @@ header {
 }
 
 .logo {
-    width: 200px;
+    width: 150px;
 }
 
 .promesse {
@@ -321,6 +321,14 @@ button {
     height: 250px;
     margin-bottom: 20px;
     padding: 0;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 70%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
 }
 
 .restaurants .card-content {
@@ -328,14 +336,6 @@ button {
     display: flex;
     flex-direction: column;
     position: relative;
-}
-
-.card img {
-    object-fit: cover;
-    width: 100%;
-    height: 70%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
 }
 
 .nouveau-label {
